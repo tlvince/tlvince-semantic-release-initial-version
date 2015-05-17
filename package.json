@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/tlvince/tlvince-semantic-release-initial-version/issues"
   },
-  "homepage": "https://github.com/tlvince/tlvince-semantic-release-initial-version"
+  "homepage": "https://github.com/tlvince/tlvince-semantic-release-initial-version",
+  "devDependencies": {
+    "semantic-release": "^3.3.1"
+  }
 }
