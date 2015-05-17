@@ -1,4 +1,23 @@
 language: node_js
 node_js:
-- '0.11'
 - '0.10'
+sudo: false
+cache:
+  directories:
+  - node_modules
+notifications:
+  email: false
+before_deploy:
+- npm config set spin false --global
+env:
+  global:
+    secure: hxpamaSESuixMMigxCE2nit3dbmNahIAj4tLfSnQbJ1vA/2jElD8Q4UdBWpdiV90SzG5qCKwdsWLeG0CrzsSlzLUKSy/6/qjgRqsz2jeO4yr6fFrD67YvN69IndkzQTFi+YLWo6y+zKETmkuREydVYHFJu/unE9AU6iNLvBvfnp9wmtWSotbkTtOk5IR+yClJLzofpMlGP/Zuh7B5/06lXAbXJbhnlu0ekHzDdmiaCtBRnWAU5ug2aDj4sk4TxFHYbNTjThGM14CauoOn1QRL5LG86Hh4nrWaudVW7s8YQMG0UiT6WxKVp0QAwHn5RFB7WqbBdZ3l9u2OhlG36ztejM8nArfDz3E2DmbnTX7T8kop/v/aNkALNsinE5CrJZlr+JmyknFoopXsg0cVuNeH48D2S9b+VGbuMizpoRIVqrDNKSUJ/jGL/93neNYGqsfguDfENyUhsyW/OWZZ2cCMAHzous1oLTX+bbhmtlHp/4Edtjps+EMrA1p9TuUper7wF+XM5i2d4S/BzyzKfTZCkVt9Oosc4yPk1gvIXQ/HuRAgk+fV7J/IK9mA0+qPGevDq/dr3M4jXNOGuOwZZcGx8Su8NgZhNg12USMtxZ17CFUDNcGFXAudukkqe6Mb8jfUZapqagNF5rJpYsCEAk/w2ezBzxkN32cjqlbjxOu7NI=
+deploy:
+  provider: npm
+  email: npm@tlvince.com
+  skip_cleanup: true
+  api_key:
+    secure: hejarXxxyke43/gkZMHe9acJhAkw13blzcsSMLLnJ4da8aQW1D0Wu6ZZUBT7XfzwYWhTLDT1eaEHWCbwJbgcT8rt9J2skPbJ/SWkCGJHqNgkpbNQ1QhzrvijsH9Xw4bQdYE8AVtm2NeVQTpZwwDFAFL6cdXmZ5glpQPDkt4RvRl7qI76NJivjL/hc+kT5Sn+zETLf8weUK5bGHu2FGOmKZ1POQuhmXbQGqxHtuIMvMveJquHOduEgELvDS0UG4zt64NRtStaCKEsp1/97IquFjq+irvuIxWve3Mh3IBix9QxxqyooL8bqSBzVD5NWNTq6yUiK/9fvbkzBySsaSERAnc6jM53Hi9s//C6xG0afppCkQvv5ojgNfP8RPcDa23ii3XrprphvJg6RT5B18qms8LXKw8RnrtTuOy2MNL8RdpBXXdEl/VRsUWZemr9FWPTbEmiy2CaEcsrvDWc+orTidXlYvcx8GfRtT0Tlw8E3+nYRONORyryuBOfSclV9VowfxrxTuJOIswW0lAPcjXs6D7Dnbnm2olvzINJXRebKh5J3OG52sUtsGwA2BH0CqxBks7PTfUqoGpTEXclCzgqJyjaNPyPmvnsZ8CUt3s72ugIgouslZr9dKKDjT5upawOy86TpTde1wAm3fPRURQ31IBhjTGx/DSe4MB8dM0/zpE=
+  on:
+    branch: master
+    repo: tlvince/tlvince-semantic-release-initial-version
